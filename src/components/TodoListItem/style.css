@@ -1,3 +1,39 @@
 .complete {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
+
+.todo-item {
+
+}
+
+.button-check, .button-delete{
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-check:focus, .button-delete:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.button-check{
+    background-color: green;
+}
+
+.button-check:active{
+    background: darkgreen;
+}
+
+.button-delete{
+    background-color: red;
+}
+
+.button-delete:active{
+    background: darkred;
+}
+
+
