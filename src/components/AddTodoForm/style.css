@@ -1,10 +1,10 @@
 .add-todo-form {
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 2rem;
     align-items: center;
-    max-width: 100%;
 }
 
 .add-button{
@@ -16,7 +16,7 @@
 }
 
 .text-input{
-    flex-basis: 85%;
+    min-width: 85%;
     background-color: #e4f9f5;
     border: none;
     padding: 1rem 1rem;
@@ -27,4 +27,10 @@
 .text-input:focus{
     outline-color: #11999e;
     box-shadow: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .text-input {
+        min-width: 70%;
+    }
 }
