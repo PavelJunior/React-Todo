@@ -51,11 +51,11 @@
 }
 
 .button-delete{
-    background-color: red;
+    background-color: #c9574f;
 }
 
 .button-delete:active{
-    background: darkred;
+    background: red;
 }
 
 
