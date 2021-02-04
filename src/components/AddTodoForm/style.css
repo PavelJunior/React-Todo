@@ -4,26 +4,27 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     align-items: center;
+    max-width: 100%;
 }
 
 .add-button{
     border: none;
     color: dimgrey;
-    background-color: green;
+    background-color: #11999e;
     font-size: 1rem;
-    padding: 0.9rem;
+    padding: 1.1rem;
 }
 
 .text-input{
     flex-basis: 85%;
-    background-color: #f0e5d8;
+    background-color: #e4f9f5;
     border: none;
     padding: 1rem 1rem;
     font-size: 1.2rem;
-    color: dimgray;
+    color: #40514e;
 }
 
 .text-input:focus{
-    outline-color: #f0e5d8;
+    outline-color: #11999e;
     box-shadow: none;
 }

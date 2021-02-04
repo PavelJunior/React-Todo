@@ -15,9 +15,16 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
   toggleTodo,
   deleteTodo,
 }) => {
+  const itemStyle = todo.complete
+    ? 'todo-item todo-item-complete'
+    : 'todo-item';
+  const textStyle = todo.complete
+    ? 'todo-text todo-text-complete'
+    : 'todo-text';
+
   return (
-    <div className="todo-item">
-      <p className="todo-text">{todo.text}</p>
+    <div className={itemStyle}>
+      <p className={textStyle}>{todo.text}</p>
       <div className="todo-buttons">
         <button className="button-check" onClick={() => toggleTodo(todo)}>
           <FontAwesomeIcon icon={faCheck} />
