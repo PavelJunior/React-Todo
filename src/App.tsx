@@ -50,12 +50,13 @@ function App() {
   return (
     <div className="background">
       <div className="list-body">
+        <h3 className="title">Your Todo List</h3>
+        <AddTodoForm addTodo={addTodo} />
         <TodoList
           toggleTodo={toggleTodo}
           deleteTodo={deleteTodo}
           todos={todos}
         />
-        <AddTodoForm addTodo={addTodo} />
       </div>
     </div>
   );

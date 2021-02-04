@@ -1,0 +1,29 @@
+.add-todo-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.add-button{
+    border: none;
+    color: dimgrey;
+    background-color: green;
+    font-size: 1rem;
+    padding: 0.9rem;
+}
+
+.text-input{
+    flex-basis: 85%;
+    background-color: #f0e5d8;
+    border: none;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    color: dimgray;
+}
+
+.text-input:focus{
+    outline-color: #f0e5d8;
+    box-shadow: none;
+}

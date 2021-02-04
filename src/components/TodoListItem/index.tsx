@@ -17,15 +17,15 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
 }) => {
   return (
     <div className="todo-item">
-      <label className={todo.complete ? 'complete' : undefined}>
-        {todo.text}
+      <p className="todo-text">{todo.text}</p>
+      <div className="todo-buttons">
         <button className="button-check" onClick={() => toggleTodo(todo)}>
           <FontAwesomeIcon icon={faCheck} />
         </button>
         <button className="button-delete" onClick={() => deleteTodo(todo)}>
           <FontAwesomeIcon icon={faTrash} />
         </button>
-      </label>
+      </div>
     </div>
   );
 };
