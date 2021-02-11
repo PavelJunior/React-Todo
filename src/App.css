@@ -13,11 +13,11 @@ body{
 .list-body{
     background-color: #30e3ca;
     width: 40rem;
-    padding: 2rem 5rem 5rem 5rem;
+    padding: 2rem 5rem 1rem 5rem;
     border-radius: 5px;
     box-sizing: border-box;
     margin: 5rem auto;
-    border: 3px #11999e solid;
+    box-shadow: 5px 3px #ccc;
 }
 
 .title {

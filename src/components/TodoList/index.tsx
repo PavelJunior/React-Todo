@@ -1,6 +1,7 @@
 import React from 'react';
 import { TodoListItem } from '../TodoListItem';
 import './style.css';
+import { animated, useTransition } from 'react-spring';
 
 interface TodoListProps {
   todos: Array<Todo>;
@@ -13,16 +14,23 @@ export const TodoList: React.FC<TodoListProps> = ({
   toggleTodo,
   deleteTodo,
 }) => {
+  const transitions = useTransition(todos, (item) => item.id, {
+    from: { transform: 'translate3d(40px,0,0)' },
+    enter: { transform: 'translate3d(0,0,0)' },
+    leave: { transform: 'translate3d(-40px,0,0)' },
+  });
+
   return (
     <div className="todo-list">
-      {todos.map((todo: Todo) => {
+      {transitions.map(({ item, key, props }) => {
         return (
-          <TodoListItem
-            key={todo.text}
-            todo={todo}
-            toggleTodo={toggleTodo}
-            deleteTodo={deleteTodo}
-          />
+          <animated.div key={key} style={props}>
+            <TodoListItem
+              todo={item}
+              toggleTodo={toggleTodo}
+              deleteTodo={deleteTodo}
+            />
+          </animated.div>
         );
       })}
     </div>

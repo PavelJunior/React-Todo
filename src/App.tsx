@@ -5,21 +5,25 @@ import './App.css';
 
 const initialTodos: Array<Todo> = [
   {
+    id: 0,
     text: 'walk the dog',
     complete: true,
   },
   {
+    id: 1,
     text: 'do dishes',
     complete: false,
   },
   {
+    id: 2,
     text: 'write an app',
     complete: false,
   },
 ];
 
 function App() {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState<Array<Todo>>(initialTodos);
+  const [nextId, setNextId] = useState<number>(3);
 
   const toggleTodo: ToggleTodo = (selectedTodo) => {
     const newTodos = todos.map((todo) => {
@@ -43,8 +47,10 @@ function App() {
   };
 
   const addTodo: AddTodo = (newTodo) => {
-    newTodo.trim() !== '' &&
-      setTodos([...todos, { text: newTodo, complete: false }]);
+    if (newTodo.trim() !== '') {
+      setTodos([...todos, { text: newTodo, complete: false, id: nextId }]);
+      setNextId(nextId + 1);
+    }
   };
 
   return (
