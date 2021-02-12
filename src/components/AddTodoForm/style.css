@@ -10,14 +10,13 @@
 .add-button{
     border: none;
     outline: none;
-    color: dimgrey;
     background-color: #11999e;
     font-size: 1rem;
     padding: 1.1rem;
 }
 
 .add-button:active{
-    background: darkgreen;
+    background: #0e7a8c;
 }
 
 .text-input{

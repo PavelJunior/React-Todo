@@ -47,15 +47,15 @@
 }
 
 .button-check:active{
-    background: darkgreen;
+    background: #0e7a8c;
 }
 
 .button-delete{
-    background-color: #c9574f;
+    background-color: #e84938 ;
 }
 
 .button-delete:active{
-    background: red;
+    background: #944938;
 }
 
 

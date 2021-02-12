@@ -40,7 +40,7 @@ function App() {
 
   const deleteTodo: DeleteTodo = (todoToDelete) => {
     const newTodos = todos.filter((todo) => {
-      return todo != todoToDelete;
+      return todo !== todoToDelete;
     });
 
     setTodos(newTodos);
